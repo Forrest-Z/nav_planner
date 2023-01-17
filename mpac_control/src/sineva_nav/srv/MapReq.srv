@@ -1,0 +1,4 @@
+string mapRequest
+---
+int8 result
+nav_msgs/OccupancyGrid mapDate

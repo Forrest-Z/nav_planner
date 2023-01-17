@@ -1,0 +1,2 @@
+geometry_msgs/PoseStamped pose
+mpac_msgs/ObjectType object

@@ -1,0 +1,5 @@
+# request message
+int32 enable
+---
+# response message
+int32 result

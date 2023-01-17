@@ -1,0 +1,24 @@
+<launch>
+  <!-- Arguments -->
+  <!-- <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/> -->
+  <arg name="map_file" default="$(find mpac_rviz)/maps/map.yaml"/>
+  <arg name="open_rviz" default="true"/>
+  <!-- <arg name="move_forward_only" default="false"/> -->
+  <arg name="multi_robot_name" default=""/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- Turtlebot3 -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find mpac_description)/urdf/turtlebot3_burger.urdf.xacro'" />
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value="$(arg multi_robot_name)"/>
+  </node>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find mpac_rviz)/rviz/mpac_navigation.rviz"/>
+  </group>
+</launch>

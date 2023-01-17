@@ -1,0 +1,5 @@
+# request message
+geometry_msgs/Pose initialpose
+---
+# response message
+int32 result

@@ -1,0 +1,6 @@
+# request message
+string state_id
+---
+# response message
+string goal_id
+int32 status_code

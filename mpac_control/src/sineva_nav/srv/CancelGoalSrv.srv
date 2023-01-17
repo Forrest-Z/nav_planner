@@ -1,0 +1,5 @@
+# request message
+string goal_id
+---
+# response message
+int32 result

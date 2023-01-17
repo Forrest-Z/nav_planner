@@ -1,0 +1,7 @@
+# request message
+string flag
+string dataReq
+---
+# response message
+int32 result
+string dataRes

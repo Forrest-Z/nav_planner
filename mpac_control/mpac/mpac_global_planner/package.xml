@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package>
+  <name>mpac_global_planner</name>
+  <version>0.4.0</version>
+  <description>The mpac_global_planner</description>
+
+  <maintainer email="shaochang@sineva.com">Shao Chang</maintainer>
+  <license>TODO</license>
+
+  <build_depend>cmake_modules</build_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>mpac_msgs</build_depend>
+  <build_depend>mpac_generic</build_depend>
+  <build_depend>mpac_rviz</build_depend>
+  <build_depend>mpac_conversions</build_depend>
+  <build_depend>mpac_geometry</build_depend>
+  <build_depend>mpac_manager</build_depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>boost</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>mpac_msgs</run_depend>
+  <run_depend>mpac_generic</run_depend>
+  <run_depend>mpac_rviz</run_depend>
+  <run_depend>mpac_conversions</run_depend>
+  <run_depend>mpac_geometry</run_depend>
+  <run_depend>mpac_manager</run_depend>
+  <run_depend>eigen</run_depend>
+  <run_depend>boost</run_depend>
+  
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lmpac_motion_planner"/>
+    
+  </export>
+</package>

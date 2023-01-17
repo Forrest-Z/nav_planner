@@ -1,0 +1,11 @@
+string flag
+# dist point
+float32 x
+float32 y
+float32 r
+# deviation point
+float32 dx
+float32 dy
+float32 dr
+---
+int8 result

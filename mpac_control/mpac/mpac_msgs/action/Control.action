@@ -1,0 +1,11 @@
+#Define the goal
+int32 id
+mpac_msgs/Task task
+mpac_msgs/ControlParameters params
+---
+#Define the result
+mpac_msgs/PoseSteering error
+---
+#Define a feedback message
+int32 state
+float32 remainingDistance

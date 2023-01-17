@@ -1,0 +1,6 @@
+# request message
+int32 moveStatus
+string info
+---
+# response message
+int8 result

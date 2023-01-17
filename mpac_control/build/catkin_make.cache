@@ -1,0 +1,2 @@
+mpac_ws/mpac_navigation:mpac_ws/mpac_simulations/mpac_description:mpac_ws/mpac_simulations/mpac_gazebo:mpac_ws/mpac_simulations/mpac_rviz:mpac_ws/mpac_slam:mpac_ws/mpac_teleop:sineva_nav
+-DCATKIN_DEVEL_PREFIX=/home/lxf/lxf_work/learning_mpac/mpac_control/devel -DCMAKE_INSTALL_PREFIX=/home/lxf/lxf_work/learning_mpac/mpac_control/install -G Unix Makefiles

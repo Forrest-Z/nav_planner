@@ -1,0 +1,6 @@
+# request message
+string goal_id
+nav_msgs/Path path
+---
+# response message
+int32 result

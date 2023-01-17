@@ -1,0 +1,15 @@
+int8 type
+# charger pose
+float32 x
+float32 y
+float32 r
+# dock point pose
+float32 px
+float32 py
+float32 pr
+# deviation pose
+float32 dx
+float32 dy
+float32 dr
+---
+int8 result

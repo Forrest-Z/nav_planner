@@ -1,0 +1,9 @@
+# request message
+string goal_id
+geometry_msgs/Pose goal
+int32 timeout
+float32 maxDistance
+---
+# response message
+int32 result
+

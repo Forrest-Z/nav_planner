@@ -1,0 +1,10 @@
+#for a given target and map return the found path
+mpac_msgs/RobotTarget target
+nav_msgs/OccupancyGrid map
+mpac_msgs/VectorMap vector_map
+mpac_msgs/GeoFence geofence
+float32 max_planning_time
+mpac_msgs/PathParameters params
+---
+mpac_msgs/Path path
+bool valid

@@ -1,0 +1,5 @@
+# request message
+sineva_nav/position[] positions
+---
+# response message
+int32 result

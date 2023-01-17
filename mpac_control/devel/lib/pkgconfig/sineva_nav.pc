@@ -1,0 +1,8 @@
+prefix=/home/lxf/lxf_work/learning_mpac/mpac_control/devel
+
+Name: sineva_nav
+Description: Description of sineva_nav
+Version: 0.0.0
+Cflags: -I/home/lxf/lxf_work/learning_mpac/mpac_control/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy sensor_msgs std_msgs message_runtime

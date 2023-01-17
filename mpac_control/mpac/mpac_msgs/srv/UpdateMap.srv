@@ -1,0 +1,17 @@
+#update map for global plan and local plan
+bool updateGridMap
+nav_msgs/OccupancyGrid map
+bool updateProhibitionMap
+mpac_msgs/VectorMap prohibition_map
+bool updateDirectionMap
+mpac_msgs/VectorMap direction_map
+bool updateSpeedMap
+mpac_msgs/VectorMap speed_map
+bool updateDynamicMap
+mpac_msgs/GeoFence dynamic_map
+bool updateNoCrossingMap
+mpac_msgs/VectorMap noCrossing_map
+bool updateNarrowChannelMap
+mpac_msgs/VectorMap channel_map
+---
+bool result

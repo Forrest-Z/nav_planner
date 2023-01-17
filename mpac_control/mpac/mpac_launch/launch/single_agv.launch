@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- 加载仿真环境 -->
+
+<!--   <node name="map_server" pkg="map_server" type="map_server" args="$(find mpac_manager)/worlds/willow.pgm 0.025" />
+
+  <node pkg="stage_ros" type="stageros" name="stageros" args="$(find mpac_manager)/worlds/willow.world" respawn="false" >
+    <param name="base_watchdog_timeout" value="0.2"/>
+  </node>
+
+  <node name="fake_localization" pkg="fake_localization" type="fake_localization" respawn="false" /> -->
+
+  <!-- 加载仿真环境 -->
+
+
+  <arg name="robot_id" default="1" />
+  <arg name="tf_prefix" value="robot$(arg robot_id)" />
+
+  <rosparam command="load"
+    file="$(find mpac_params)/config/global.cfg" />
+
+
+
+  <node pkg="mpac_manager"
+        type="mpac_manager_node"
+        name="mpac_manager_node_agv" output="screen">
+
+    <param name="model" value="agv_s200" />
+    <param name="max_linearVelocity" value="1.0" />
+    <param name="min_linearVelocity" value="-0.3" />
+    <param name="max_angularVelocity" value="0.8" />
+    <param name="min_angularVelocity" value="-0.8" />
+    <param name="max_linearAcceleration" value="0.5" />
+    <param name="min_linearAcceleration" value="-0.5" />
+    <param name="max_angularAcceleration" value="1.0" />
+    <param name="min_angularAcceleration" value="-1.0" />
+    <param name="gain_state_x" value="30.0" />
+    <param name="gain_state_y" value="30.0" />
+    <param name="gain_state_theta" value= "5.0" />
+    <param name="gain_control_v" value="10.0" />
+    <param name="gain_control_w" value="10.0" />
+    <param name="avoidMode" value="0" />
+    <param name="waitTime" value="-1" />
+    <param name="extraDistance" value="-1.0" />
+
+  </node>
+
+
+  <node pkg="mpac_global_planner" 
+        type="mpac_get_path_service"
+        name="mpac_get_path_service"
+        output="screen">
+    <param name="model" value="agv_s200" />
+    <param name="motion_primitives_directory" value="$(find mpac_global_planner)/Primitives/" />
+    <param name="lookup_tables_directory" value="$(find mpac_global_planner)/LookupTables/" />
+    <param name="min_incr_path_dist" value="0.05" />
+    <param name="visualize" value="false" />
+    <param name="use_grid_distance" value="true" />
+    <param name="use_fast_plan_mode" value="true" />
+  </node>
+
+  <node pkg="mpac_local_planner" 
+        type="mpac_local_planner_node"
+        name="mpac_local_planner_node"
+        output="screen">  
+  </node>
+
+  <rosparam param="Extri_T_baselink_camera">[0.44, 0., 0.25, 0.524, -0.475, 0.475, -0.524]</rosparam>
+  <param name="CamPoint_enable" value="true"/>
+  <node pkg="mpac_filter" type="mpac_filter_node" name="mpac_filter_node" output="screen">
+   
+  </node>
+  <include file="$(find mpac_plane_fit_ground_filter)/launch/plane_ground_filter.launch"/>
+
+
+</launch>

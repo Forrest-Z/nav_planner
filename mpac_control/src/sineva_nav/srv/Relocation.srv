@@ -1,0 +1,6 @@
+string mapId
+string flag
+---
+int8 result
+string mapId
+geometry_msgs/Pose pose

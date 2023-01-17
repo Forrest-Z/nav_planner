@@ -1,0 +1,8 @@
+prefix=/home/lxf/lxf_work/learning_mpac/mpac_control/install
+
+Name: mpac_rviz
+Description: Description of mpac_rviz
+Version: 1.2.6
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

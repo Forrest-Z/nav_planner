@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam param="Extri_T_baselink_camera">[0.44, 0., 0.25, 0.524, -0.475, 0.475, -0.524]</rosparam>
+  <param name="CamPoint_enable" value="true"/>
+  <node pkg="mpac_filter" type="mpac_filter_node" name="mpac_filter_node" output="screen">
+   
+  </node>
+
+
+</launch>
